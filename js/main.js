@@ -17,15 +17,17 @@ libro2 = new Libros('El Problema de los Tres Cuerpos', 'Cixin Liu', 'Ciencia Fic
 libro3 = new Libros('Dune', 'Frank Herbert', 'Ciencia Ficción', 550);
 libro4 = new Libros('Harry Potter', 'J.K Rowling', 'Fantasía', 1000);
 
-librosFantasia = [];
-librosCF = [];
+const librosFantasia = [];
+const librosCF = [];
+const librosTotal = [];
 
 librosFantasia.push(libro1, libro4);
 librosCF.push(libro2, libro3);
+librosTotal.push(libro1, libro2, libro3, libro4);
 
 function seleccionar(seleccion) {
   while (seleccion != 0) {
-    seleccion = parseInt(prompt(`Bienvenido a la Libreria PandaPerezoso, seleccione un género de libro para buscar:\n1: Fantasía\n2: Ciencia Ficción\n\n0: Salir`));
+    seleccion = parseInt(prompt(`Bienvenido a la Libreria PandaPerezoso, seleccione un género de libro para buscar:\n1: Fantasía\n2: Ciencia Ficción\n\n3: Ver info completa de los libros en la página\n4: Ver info completa de los libros en la página, y ordenados por precio de menor a mayor\n0: Salir`));
     switch (seleccion) {
       case 1:
         seleccionFantasia();
@@ -33,6 +35,14 @@ function seleccionar(seleccion) {
       case 2:
         seleccionCF();
         break;
+      case 3:
+        escribirLista();
+        seleccion = 0;
+        break;
+      case 4:
+        ordenarPorPrecio();
+        escribirLista();
+        seleccion = 0;
       case 0:
         break;
       default:
@@ -60,8 +70,10 @@ function seleccionFantasia(libroElegido) {
         });
         break;
       case 4:
-        alert('El total de la compra fue de $' + carrito + ' ¡Hasta la próxima!');
+        alert('Gracias por su compra, salga del programa para ver el total gastado en la página');
         libroElegido = 0;
+        seleccion = 0;
+        comprarHTML();
         carrito = 0;
         break;
       case 0:
@@ -90,8 +102,10 @@ function seleccionCF(libroElegido) {
         });
         break;
       case 4:
-        alert('El total de la compra fue de $' + carrito + ' ¡Hasta la próxima!');
+        alert('Gracias por su compra, salga del programa para ver el total gastado en la página');
         libroElegido = 0;
+        seleccion = 0;
+        comprarHTML();
         carrito = 0;
         break;
       case 0:
@@ -101,5 +115,32 @@ function seleccionCF(libroElegido) {
         break;
     }
   }
+}
+function escribirLista() {
+  librosTotal.forEach((libro) => {
+    let contenedor = document.createElement('div');
+    contenedor.innerHTML = `<h3>Nombre del libro:  ${libro.nombre}</h3>
+                            <p>Género del libro: ${libro.genero}</p>
+                            <p>Autor del libro: ${libro.autor}</p>
+                            <p>Precio: ${libro.precio}</p>
+                            <br>`;
+    document.body.append(contenedor);
+  });
+}
+function comprarHTML() {
+  let contenedor = document.createElement('div');
+  contenedor.innerHTML = `<h2>El total de su compra fue de $${carrito}</h2>`;
+  document.body.append(contenedor);
+}
+function ordenarPorPrecio() {
+  librosTotal.sort(function (a, b) {
+    if (a.precio > b.precio) {
+      return 1;
+    }
+    if (a.precio < b.precio) {
+      return -1;
+    }
+    return 0;
+  });
 }
 seleccionar();
