@@ -317,6 +317,7 @@ template {
 
 .body {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .body section {
@@ -326,6 +327,9 @@ template {
   margin: 0 0 30px 30px;
 }
 .body #productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 1px solid black;
   margin: 0 0 30px 30px;
 }
@@ -337,13 +341,18 @@ template {
   height: 500px;
 }
 .body #productos #card {
+  width: 411px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .body #carrito {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 1px solid black;
   margin: 0 0 30px 30px;
+  display: flex;
 }
 .body #carrito div {
   border: 1px solid black;
@@ -353,6 +362,7 @@ template {
   height: 500px;
 }
 .body #carrito #card {
+  width: 411px;
   display: flex;
   flex-direction: column;
   align-items: center;
