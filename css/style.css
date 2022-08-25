@@ -14,7 +14,7 @@ body {
   background-image: url(../img/wallpaper.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Sections
@@ -78,8 +78,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -314,4 +313,39 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+.body {
+  display: flex;
+}
+.body section {
+  margin: 10px 10px 10px 10px;
+}
+.body h2 {
+  margin: 0 0 30px 30px;
+}
+.body #productos {
+  border: 1px solid black;
+  margin: 0 0 30px 30px;
+}
+.body #productos div {
+  border: 1px solid black;
+}
+.body #productos img {
+  width: 300px;
+  height: 500px;
+}
+.body #carrito {
+  border: 1px solid black;
+  margin: 0 0 30px 30px;
+}
+.body #carrito div {
+  border: 1px solid black;
+}
+.body #carrito img {
+  width: 300px;
+  height: 500px;
+}
+.body span {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
