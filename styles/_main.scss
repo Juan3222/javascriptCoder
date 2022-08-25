@@ -1,5 +1,6 @@
 .body {
   display: flex;
+  justify-content: space-around;
   section {
     margin: 10px 10px 10px 10px;
   }
@@ -16,6 +17,11 @@
       width: 300px;
       height: 500px;
     }
+    #card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   #carrito {
     border: 1px solid black;
@@ -27,8 +33,23 @@
       width: 300px;
       height: 500px;
     }
+    #card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   span {
     cursor: pointer;
+    font-size: 2rem;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .secCar {
+    justify-self: end;
   }
 }

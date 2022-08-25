@@ -8,8 +8,6 @@ class Libros {
     this.id = id;
   }
 }
-let carrito = 0;
-let comprar = 0;
 
 libro1 = new Libros('El Camino de los Reyes', 'Brandon Sanderson', 'Fantasía', 990, 'https://www.penguinlibros.com/uy/1765875/el-camino-de-los-reyes-el-archivo-de-las-tormentas-1.jpg', 0);
 libro2 = new Libros('El Problema de los Tres Cuerpos', 'Cixin Liu', 'Ciencia Ficción', 1400, 'https://www.penguinlibros.com/uy/243123/el-problema-de-los-tres-cuerpos-trilogia-de-los-tres-cuerpos-1.jpg', 1);
@@ -24,17 +22,18 @@ const carro = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
 
 function mostrarProductos() {
-  let html;
+  let html = '';
   librosTotal.forEach((libro) => {
     html =
       html +
       `
-    <div onclick="agregarCarro(${libro.id})" id = "card">
+    <div id = "card">
       <h3>Nombre del libro:  ${libro.nombre}</h3>
       <p>Género del libro: ${libro.genero}</p>
       <p>Autor del libro: ${libro.autor}</p>
       <p>Precio: ${libro.precio}</p>
       <img src="${libro.img}" alt="">
+      <span onclick="agregarCarro(${libro.id})">🛒</span>
       <br>
     </div>  
     `;
@@ -43,36 +42,49 @@ function mostrarProductos() {
 }
 
 function mostrarCarro() {
-  let html;
+  let html = '';
+  let i = 0;
   carro.forEach((libro) => {
     html =
       html +
       `
-    <div" id = "card">
+    <div id = "card">
       <h3>Nombre del libro:  ${libro.nombre}</h3>
       <p>Género del libro: ${libro.genero}</p>
       <p>Autor del libro: ${libro.autor}</p>
       <p>Precio: ${libro.precio}</p>
       <img src="${libro.img}" alt="">
-      <span onclick="eliminarCarro${libro.id}">🛒</span>
+      <span onclick="eliminarCarro(${i})">❌</span>
       <br>
     </div>  
     `;
+    i += 1;
   });
   document.getElementById('carrito').innerHTML = html;
 }
 
 function agregarCarro(id) {
-  const resultado = librosTotal.find((el) => el.id === id);
+  let resultado = librosTotal.find((el) => el.id === id);
   carro.push(resultado);
   mostrarCarro();
   mostrarProductos();
+  verTotalPrecio();
 }
 function eliminarCarro(id) {
-  const resultado = librosTotal.find((el) => el.id === id);
-  carro.push(resultado);
+  carro.splice(id, 1);
   mostrarCarro();
   mostrarProductos();
+  verTotalPrecio();
+}
+function verTotalPrecio() {
+  let carrito = 0;
+  carro.forEach((libro) => {
+    carrito = carrito + libro.precio;
+    document.getElementById('carro-cantidad').innerHTML = `$${carrito}`;
+  });
+  if (carro.length == 0) {
+    document.getElementById('carro-cantidad').innerHTML = `$0`;
+  }
 }
 
 mostrarProductos();
