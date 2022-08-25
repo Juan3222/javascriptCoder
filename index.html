@@ -9,11 +9,16 @@
   </head>
   <body class="body">
     <section class="section secPro">
-      <h2>Listado de libros</h2>
+      <h1>Listado de libros</h1>
+      <select id="genero" onclick="filtrarGenero(this.value)">
+        <option value="">Todos</option>
+        <option value="Fantasía">Fantasía</option>
+        <option value="Ciencia Ficción">Ciencia Ficción</option>
+      </select>
       <div id="productos"></div>
     </section>
     <section class="section secCar">
-      <h2>Libros en carrito</h2>
+      <h1>Libros en carrito</h1>
       <div id="carrito"></div>
     </section>
     <div class="carro">

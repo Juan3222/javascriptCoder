@@ -14,12 +14,12 @@ libro2 = new Libros('El Problema de los Tres Cuerpos', 'Cixin Liu', 'Ciencia Fic
 libro3 = new Libros('Dune', 'Frank Herbert', 'Ciencia Ficción', 550, 'https://1.bp.blogspot.com/-ZyR9QhRn2MY/XvxFKYjBAFI/AAAAAAAAZPs/WIcAZt8Mkn0YriEGLXWgsRBWOCXlz7ykQCNcBGAsYHQ/s1600/dune.jpg', 2);
 libro4 = new Libros('Harry Potter', 'J.K Rowling', 'Fantasía', 1000, 'https://static.wikia.nocookie.net/esharrypotter/images/d/db/HP1_portada_espa%C3%B1ol_de_bolsillo_2020.jpg', 3);
 libro5 = new Libros('El Bestiario de Axlin', 'Laura Gallego', 'Fantasía', 2000, 'https://images-na.ssl-images-amazon.com/images/I/91XWCsyDYrL.jpg', 4);
-libro6 = new Libros('Fundación', 'Isaac Asimov', 'Ciencie Ficción', 600, 'https://images-na.ssl-images-amazon.com/images/I/81HVLHE1yTL.jpg', 5);
+libro6 = new Libros('Fundación', 'Isaac Asimov', 'Ciencia Ficción', 600, 'https://images-na.ssl-images-amazon.com/images/I/81HVLHE1yTL.jpg', 5);
 
-const librosTotal = [];
-const carro = [];
-
+let librosTotal = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
+let librosTotalCopia = [...librosTotal];
+const carro = [];
 
 function mostrarProductos() {
   let html = '';
@@ -85,6 +85,13 @@ function verTotalPrecio() {
   if (carro.length == 0) {
     document.getElementById('carro-cantidad').innerHTML = `$0`;
   }
+}
+function filtrarGenero(genero) {
+  librosTotal = [...librosTotalCopia];
+  if (genero == 'Fantasía' || genero == 'Ciencia Ficción') {
+    librosTotal = librosTotal.filter((item) => item.genero == genero);
+  }
+  mostrarProductos();
 }
 
 mostrarProductos();
