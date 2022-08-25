@@ -70,12 +70,14 @@ function agregarCarro(id) {
   mostrarProductos();
   verTotalPrecio();
 }
+
 function eliminarCarro(id) {
   carro.splice(id, 1);
   mostrarCarro();
   mostrarProductos();
   verTotalPrecio();
 }
+
 function verTotalPrecio() {
   let carrito = 0;
   carro.forEach((libro) => {
@@ -86,6 +88,7 @@ function verTotalPrecio() {
     document.getElementById('carro-cantidad').innerHTML = `$0`;
   }
 }
+
 function filtrarGenero(genero) {
   librosTotal = [...librosTotalCopia];
   if (genero == 'Fantasía' || genero == 'Ciencia Ficción') {
