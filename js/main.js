@@ -39,10 +39,10 @@ function mostrarProductos() {
     `;
   });
   document.getElementById('productos').innerHTML = html;
+  obtenerCarroEnJson();
 }
 
 function mostrarCarro() {
-  obtenerCarroEnJson();
   let html = '';
   carro.forEach((libro, i) => {
     html =
@@ -98,5 +98,5 @@ function filtrarGenero(genero) {
 }
 
 mostrarProductos();
-obtenerCarroEnJson();
 mostrarCarro();
+obtenerCarroEnJson();
