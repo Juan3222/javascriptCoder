@@ -1,6 +1,7 @@
 function guardarCarroEnJson(carro) {
   let carroJson = JSON.stringify(carro);
-  return localStorage.setItem('carroJson', carroJson);
+  localStorage.setItem('carroJson', carroJson);
+  return carroJson;
 }
 
 function obtenerCarroEnJson() {

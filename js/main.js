@@ -20,7 +20,6 @@ let librosTotal = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
 let librosTotalCopia = [...librosTotal];
 let carro = [];
-let carroLs;
 
 function mostrarProductos() {
   let html = '';
@@ -98,5 +97,4 @@ function filtrarGenero(genero) {
 }
 
 mostrarProductos();
-mostrarCarro();
 obtenerCarroEnJson();
