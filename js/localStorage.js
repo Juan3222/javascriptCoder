@@ -6,6 +6,8 @@ const obtenerCarroJson = () => {
   if (!carroLs) {
     carroLs = localStorage.getItem('carroJson');
     carroLs = JSON.parse(carroLs);
-    return (carro = carroLs);
+    carro = carroLs;
+    mostrarCarro();
   }
+  return carro;
 };
