@@ -1,14 +1,11 @@
-function guardarCarroEnJson(carro) {
+function guardarCarroEnJson() {
   let carroJson = JSON.stringify(carro);
-  localStorage.setItem('carroJson', carroJson);
-  return 'carroJson';
+  return localStorage.setItem('carroJson', carroJson);
 }
-
-function obtenerCarroEnJson() {
-  carroLs = localStorage.getItem('carroJson');
-  carroLs = JSON.parse(carroLs);
-  if (carroLs !== null || carroLs !== undefined) {
-    carro = carroLs;
+const obtenerCarroJson = () => {
+  if (!carroLs) {
+    carroLs = localStorage.getItem('carroJson');
+    carroLs = JSON.parse(carroLs);
+    return (carro = carroLs);
   }
-  return carro;
-}
+};

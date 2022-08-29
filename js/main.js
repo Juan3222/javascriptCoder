@@ -20,6 +20,8 @@ let librosTotal = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
 let librosTotalCopia = [...librosTotal];
 let carro = [];
+let carroLs;
+obtenerCarroJson();
 
 function mostrarProductos() {
   let html = '';
@@ -39,7 +41,6 @@ function mostrarProductos() {
     `;
   });
   document.getElementById('productos').innerHTML = html;
-  obtenerCarroEnJson();
 }
 
 function mostrarCarro() {
@@ -66,14 +67,14 @@ function mostrarCarro() {
 function agregarCarro(id) {
   let resultado = librosTotal.find((el) => el.id === id);
   carro.push(resultado);
-  guardarCarroEnJson(carro);
+  guardarCarroEnJson();
   mostrarProductos();
   mostrarCarro();
 }
 
 function eliminarCarro(id) {
   carro.splice(id, 1);
-  guardarCarroEnJson(carro);
+  guardarCarroEnJson();
   mostrarProductos();
   mostrarCarro();
 }
@@ -99,4 +100,3 @@ function filtrarGenero(genero) {
 
 mostrarProductos();
 mostrarCarro();
-obtenerCarroEnJson();
