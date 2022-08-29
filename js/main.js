@@ -39,10 +39,10 @@ function mostrarProductos() {
     `;
   });
   document.getElementById('productos').innerHTML = html;
-  mostrarCarro();
 }
 
 function mostrarCarro() {
+  obtenerCarroEnJson();
   let html = '';
   carro.forEach((libro, i) => {
     html =
@@ -68,12 +68,14 @@ function agregarCarro(id) {
   carro.push(resultado);
   guardarCarroEnJson(carro);
   mostrarProductos();
+  mostrarCarro();
 }
 
 function eliminarCarro(id) {
   carro.splice(id, 1);
   guardarCarroEnJson(carro);
   mostrarProductos();
+  mostrarCarro();
 }
 
 function verTotalPrecio() {
@@ -97,3 +99,4 @@ function filtrarGenero(genero) {
 
 mostrarProductos();
 obtenerCarroEnJson();
+mostrarCarro();

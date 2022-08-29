@@ -8,6 +8,5 @@ function obtenerCarroEnJson() {
   carroLs = localStorage.getItem('carroJson');
   carroLs = JSON.parse(carroLs);
   carro = carroLs;
-  mostrarCarro();
   return carro;
 }
