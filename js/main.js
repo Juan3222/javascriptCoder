@@ -20,8 +20,6 @@ let librosTotal = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
 let librosTotalCopia = [...librosTotal];
 let carro = [];
-let carroLs;
-obtenerCarroJson();
 
 function mostrarProductos() {
   let html = '';
@@ -62,19 +60,20 @@ function mostrarCarro() {
   });
   document.getElementById('carrito').innerHTML = html;
   verTotalPrecio();
+  obtenerCarroJson();
 }
 
 function agregarCarro(id) {
   let resultado = librosTotal.find((el) => el.id === id);
   carro.push(resultado);
-  guardarCarroEnJson();
+  guardarCarroEnJson.apply(this, carro);
   mostrarProductos();
   mostrarCarro();
 }
 
 function eliminarCarro(id) {
   carro.splice(id, 1);
-  guardarCarroEnJson();
+  guardarCarroEnJson.apply(this, carro);
   mostrarProductos();
   mostrarCarro();
 }
@@ -98,5 +97,25 @@ function filtrarGenero(genero) {
   mostrarProductos();
 }
 
+function guardarCarroEnJson() {
+  if (carro.length === 0) {
+    let carroJson = JSON.stringify(carro);
+    return localStorage.setItem('carroJson', carroJson);
+  }
+  carroJson = JSON.stringify(carro);
+  return localStorage.setItem('carroJson', carroJson);
+}
+
+const obtenerCarroJson = () => {
+  if (typeof carroJson !== undefined || typeof carroJson !== null) {
+    carroLs = localStorage.getItem('carroJson');
+    carroLs = JSON.parse(carroLs);
+    return (carro = carroLs);
+  } else {
+    return carro;
+  }
+};
+
 mostrarProductos();
+obtenerCarroJson();
 mostrarCarro();
