@@ -19,7 +19,8 @@ libro6 = new Libros('Fundación', 'Isaac Asimov', 'Ciencia Ficción', 600, 'http
 let librosTotal = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
 let librosTotalCopia = [...librosTotal];
-const carro = [];
+let carro = [];
+let carroLs;
 
 function mostrarProductos() {
   let html = '';
@@ -43,8 +44,7 @@ function mostrarProductos() {
 
 function mostrarCarro() {
   let html = '';
-  let i = 0;
-  carro.forEach((libro) => {
+  carro.forEach((libro, i) => {
     html =
       html +
       `
@@ -58,24 +58,24 @@ function mostrarCarro() {
       <br>
     </div>  
     `;
-    i += 1;
   });
   document.getElementById('carrito').innerHTML = html;
+  verTotalPrecio();
 }
 
 function agregarCarro(id) {
   let resultado = librosTotal.find((el) => el.id === id);
   carro.push(resultado);
+  guardarCarroEnJson(carro);
   mostrarCarro();
   mostrarProductos();
-  verTotalPrecio();
 }
 
 function eliminarCarro(id) {
   carro.splice(id, 1);
+  guardarCarroEnJson(carro);
   mostrarCarro();
   mostrarProductos();
-  verTotalPrecio();
 }
 
 function verTotalPrecio() {
@@ -98,3 +98,5 @@ function filtrarGenero(genero) {
 }
 
 mostrarProductos();
+mostrarCarro();
+obtenerCarroEnJson();
