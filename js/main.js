@@ -39,6 +39,7 @@ function mostrarProductos() {
     `;
   });
   document.getElementById('productos').innerHTML = html;
+  mostrarCarro();
 }
 
 function mostrarCarro() {
@@ -66,14 +67,12 @@ function agregarCarro(id) {
   let resultado = librosTotal.find((el) => el.id === id);
   carro.push(resultado);
   guardarCarroEnJson(carro);
-  mostrarCarro();
   mostrarProductos();
 }
 
 function eliminarCarro(id) {
   carro.splice(id, 1);
   guardarCarroEnJson(carro);
-  mostrarCarro();
   mostrarProductos();
 }
 
