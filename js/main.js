@@ -99,3 +99,4 @@ function filtrarGenero(genero) {
 }
 
 mostrarProductos();
+mostrarCarro();

@@ -3,11 +3,11 @@ function guardarCarroEnJson() {
   return localStorage.setItem('carroJson', carroJson);
 }
 const obtenerCarroJson = () => {
-  if (!carroLs) {
+  if (typeof carroLs === 'undefined' || typeof carroLs === 'null') {
     carroLs = localStorage.getItem('carroJson');
     carroLs = JSON.parse(carroLs);
-    carro = carroLs;
-    mostrarCarro();
+    return (carro = carroLs);
+  } else {
+    return;
   }
-  return carro;
 };
