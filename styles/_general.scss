@@ -1,24 +1,17 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&family=Yanone+Kaffeesatz&display=swap');
 /* Document
-   ========================================================================== */
-
-/**
+   ========================================================================== */ /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 body {
-  background-image: url(../img/wallpaper.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
+  background-color: rgb(206, 206, 206);
 }
-
 /* Sections
      ========================================================================== */
 

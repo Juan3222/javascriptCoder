@@ -21,8 +21,6 @@ librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
 let librosTotalCopia = [...librosTotal];
 let carro = [];
 
-obtenerCarroEnJson();
-
 function mostrarProductos() {
   let html = '';
   librosTotal.forEach((libro) => {
@@ -96,20 +94,5 @@ function filtrarGenero(genero) {
   }
   mostrarProductos();
 }
-
-function guardarCarroEnJson() {
-  carroJson = JSON.stringify(carro);
-  return localStorage.setItem('carroJson', carroJson);
-}
-
-function obtenerCarroEnJson() {
-  carroLs = localStorage.getItem('carroJson');
-  carroLs = JSON.parse(carroLs);
-  if (carroLs === null) {
-    return;
-  } else if (carroLs) {
-    return (carro = carro.concat(carroLs));
-  }
-}
-
+obtenerCarroEnJson();
 mostrarProductos();
