@@ -70,6 +70,14 @@ function agregarCarro(id) {
   carro.push(resultado);
   guardarCarroEnJson();
   mostrarProductos();
+  Toastify({
+    text: `${resultado.nombre} ha sido agregado al carrito con éxito`,
+    position: 'right',
+    style: {
+      background: 'linear-gradient(to right, #000000, #5f5f5f)',
+    },
+    duration: 3500,
+  }).showToast();
 }
 
 function eliminarCarro(id) {
