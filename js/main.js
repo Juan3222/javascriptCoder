@@ -44,7 +44,8 @@ function mostrarProductos() {
 
 function mostrarCarro() {
   let html = '';
-  carro.forEach((libro, i) => {
+  let i = 0;
+  carro.forEach((libro) => {
     html =
       html +
       `
@@ -58,6 +59,7 @@ function mostrarCarro() {
       <br>
     </div>  
     `;
+    i++;
   });
   document.getElementById('carrito').innerHTML = html;
   verTotalPrecio();
@@ -80,18 +82,14 @@ function verTotalPrecio() {
   let carrito = 0;
   carro.forEach((libro) => {
     carrito = carrito + libro.precio;
-    document.getElementById('carro-cantidad').innerHTML = `$${carrito}`;
   });
-  if (carro.length == 0) {
-    document.getElementById('carro-cantidad').innerHTML = `$0`;
-  }
+  carro.length === 0 ? (document.getElementById('carro-cantidad').innerHTML = `$0`) : (document.getElementById('carro-cantidad').innerHTML = `$${carrito}`);
 }
 
 function filtrarGenero(genero) {
   librosTotal = [...librosTotalCopia];
-  if (genero == 'Fantasía' || genero == 'Ciencia Ficción') {
-    librosTotal = librosTotal.filter((item) => item.genero == genero);
-  }
+  (genero == 'Fantasía' || genero == 'Ciencia Ficción') && (librosTotal = librosTotal.filter((item) => item.genero == genero));
+
   mostrarProductos();
 }
 obtenerCarroEnJson();

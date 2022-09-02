@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Document</title>
-</head>
-<body>
-    
-    <script src="./js/main.js"></script>
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__titleLogo">
+          <img id="logo" src="../img/panda.svg" alt="" />
+          <div class="header__title">
+            <h1 id="title">Librería</h1>
+            <span class="title-span">Panda</span>
+            <span class="title-span">Perezoso</span>
+          </div>
+        </div>
+        <nav class="navbar">
+          <ul class="navbar__ul">
+            <li class="navbar__ul--li">
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li class="navbar__ul--li">
+              <a href="libros.html">Libros</a>
+            </li>
+            <li class="navbar__ul--li">
+              <a href="">Contacto</a>
+            </li>
+            <li class="navbar__ul--li">
+              <a href=""><img src="" alt="" />🛒</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section">
+        <h2>Listado de libros</h2>
+        <select id="genero" onclick="filtrarGenero(this.value)">
+          <option value="">Todos</option>
+          <option value="Fantasía">Fantasía</option>
+          <option value="Ciencia Ficción">Ciencia Ficción</option>
+        </select>
+        <div class="card-container" id="productos"></div>
+      </section>
+      <section class="section">
+        <h2>Libros en carrito</h2>
+        <div class="card-container" id="carrito"></div>
+      </section>
+      <div class="carro">
+        <span>El total del carro es: </span>
+        <span id="carro-cantidad">$0</span>
+      </div>
+    </main>
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

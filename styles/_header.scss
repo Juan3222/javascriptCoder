@@ -26,6 +26,7 @@
           font-family: 'Poppins';
         }
         .title-span {
+          font-size: 2rem;
           color: $color-header;
           font-family: 'Rubik', sans-serif;
           cursor: text;
@@ -45,21 +46,26 @@
           border: 2px solid $color-header;
           width: 8.5rem;
           height: 2rem;
+          transition: 0.3s;
           a {
             text-align: center;
             list-style: none;
             font-size: 1.5rem;
+            font-weight: 600;
             font-family: 'Poppins';
             width: 100%;
-            padding: 0.2rem 0 0.2rem 0;
+            padding: 0.13rem 0 0.13rem 0;
             text-decoration: none;
             color: $color-header;
-            transition: 0.4s;
+            transition: 0.3s;
             &:hover {
               background-color: $color-header;
               color: black;
               letter-spacing: 1px;
             }
+          }
+          &:hover {
+            border: 2px solid black;
           }
         }
       }

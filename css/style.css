@@ -342,6 +342,7 @@ template {
   font-family: "Poppins";
 }
 .header .header__container .header__titleLogo .header__title .title-span {
+  font-size: 2rem;
   color: rgb(243, 243, 243);
   font-family: "Rubik", sans-serif;
   cursor: text;
@@ -358,64 +359,69 @@ template {
   border: 2px solid rgb(243, 243, 243);
   width: 8.5rem;
   height: 2rem;
+  transition: 0.3s;
 }
 .header .header__container .navbar .navbar__ul .navbar__ul--li a {
   text-align: center;
   list-style: none;
   font-size: 1.5rem;
+  font-weight: 600;
   font-family: "Poppins";
   width: 100%;
-  padding: 0.2rem 0 0.2rem 0;
+  padding: 0.13rem 0 0.13rem 0;
   text-decoration: none;
   color: rgb(243, 243, 243);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .header .header__container .navbar .navbar__ul .navbar__ul--li a:hover {
   background-color: rgb(243, 243, 243);
   color: black;
   letter-spacing: 1px;
 }
+.header .header__container .navbar .navbar__ul .navbar__ul--li:hover {
+  border: 2px solid black;
+}
 
-.body {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.body .section {
+.main .section {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   margin: 10px 10px 10px 10px;
 }
-.body .section #genero {
+.main .section #genero {
   margin: 20px 0 20px 0;
   width: 150px;
   height: 50px;
 }
-.body .section h2 {
+.main .section h2 {
   font-size: 2rem;
 }
-.body .card-container {
+.main .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border: 1px solid black;
   margin: 0 0 30px 30px;
 }
-.body .card-container #card {
+.main .card-container #card {
   width: 411px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
 }
-.body .card-container #card img {
+.main .card-container #card img {
   width: 300px;
   height: 500px;
 }
-.body span {
+.main span {
   cursor: pointer;
   font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
