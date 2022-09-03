@@ -1,1 +1,11 @@
-$color-header: rgb(243, 243, 243);
+$color-header: #f3f3f3;
+
+%cards {
+  width: 15rem;
+  height: 30rem;
+  padding-top: 1rem;
+  background: #1c1c1c;
+  color: $color-header;
+  border-radius: 7px;
+  box-shadow: 8px 8px 0px #2d2d2d, -8px -8px 0px #0b0b0b;
+}

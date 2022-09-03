@@ -18,87 +18,16 @@ libro6 = new Libros('Fundación', 'Isaac Asimov', 'Ciencia Ficción', 600, 'http
 
 let librosTotal = [];
 librosTotal.push(libro1, libro2, libro3, libro4, libro5, libro6);
-let librosTotalCopia = [...librosTotal];
 let carro = [];
 
-function mostrarProductos() {
+function numerarCarrito() {
   let html = '';
-  librosTotal.forEach((libro) => {
-    html =
-      html +
-      `
-    <div id = "card">
-      <h3>Nombre del libro:  ${libro.nombre}</h3>
-      <p>Género del libro: ${libro.genero}</p>
-      <p>Autor del libro: ${libro.autor}</p>
-      <p>Precio: ${libro.precio}</p>
-      <img src="${libro.img}" alt="">
-      <span onclick="agregarCarro(${libro.id})">🛒</span>
-      <br>
-    </div>  
+  carroLongitud = carro.length;
+  html =
+    html +
+    `
+    <p id = "carroContador" >${carroLongitud}</p>
     `;
-  });
-  document.getElementById('productos').innerHTML = html;
-  mostrarCarro();
-}
 
-function mostrarCarro() {
-  let html = '';
-  let i = 0;
-  carro.forEach((libro) => {
-    html =
-      html +
-      `
-    <div id = "card">
-      <h3>Nombre del libro:  ${libro.nombre}</h3>
-      <p>Género del libro: ${libro.genero}</p>
-      <p>Autor del libro: ${libro.autor}</p>
-      <p>Precio: ${libro.precio}</p>
-      <img src="${libro.img}" alt="">
-      <span onclick="eliminarCarro(${i})">❌</span>
-      <br>
-    </div>  
-    `;
-    i++;
-  });
-  document.getElementById('carrito').innerHTML = html;
-  verTotalPrecio();
+  document.getElementById('numeroCarro').innerHTML = html;
 }
-
-function agregarCarro(id) {
-  let resultado = librosTotal.find((el) => el.id === id);
-  carro.push(resultado);
-  guardarCarroEnJson();
-  mostrarProductos();
-  Toastify({
-    text: `${resultado.nombre} ha sido agregado al carrito con éxito`,
-    position: 'right',
-    style: {
-      background: 'linear-gradient(to right, #000000, #5f5f5f)',
-    },
-    duration: 3500,
-  }).showToast();
-}
-
-function eliminarCarro(id) {
-  carro.splice(id, 1);
-  guardarCarroEnJson();
-  mostrarProductos();
-}
-
-function verTotalPrecio() {
-  let carrito = 0;
-  carro.forEach((libro) => {
-    carrito = carrito + libro.precio;
-  });
-  carro.length === 0 ? (document.getElementById('carro-cantidad').innerHTML = `$0`) : (document.getElementById('carro-cantidad').innerHTML = `$${carrito}`);
-}
-
-function filtrarGenero(genero) {
-  librosTotal = [...librosTotalCopia];
-  (genero == 'Fantasía' || genero == 'Ciencia Ficción') && (librosTotal = librosTotal.filter((item) => item.genero == genero));
-
-  mostrarProductos();
-}
-obtenerCarroEnJson();
-mostrarProductos();
