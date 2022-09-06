@@ -57,8 +57,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="section">
-        <h2>Listado de libros</h2>
+      <section class="side__main">
         <div id="filtroGenero">
           <p>Ordenar por:</p>
           <select id="genero" onclick="filtrarGenero(this.value)">
@@ -66,7 +65,16 @@
             <option value="Fantasía">Fantasía</option>
             <option value="Ciencia Ficción">Ciencia Ficción</option>
           </select>
+          <select id="ordenar" onclick="filtrarPrecio(this.value)">
+            <option value="Relevancia">Relevancia</option>
+            <option value="Alfabetico">Alfabéticamente</option>
+            <option value="MenorM">Precio más bajo</option>
+            <option value="MayorM">Precio más alto</option>
+          </select>
         </div>
+      </section>
+      <section class="section">
+        <h2>Listado de libros</h2>
         <div class="card-container" id="productos"></div>
       </section>
     </main>
