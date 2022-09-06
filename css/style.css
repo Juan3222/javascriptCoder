@@ -312,7 +312,7 @@ template {
   display: none;
 }
 
-.main .card-container #card {
+.main .card-container .card {
   width: 15rem;
   height: 30rem;
   padding-top: 1rem;
@@ -328,6 +328,7 @@ template {
   width: 100%;
   height: 10rem;
   background-color: black;
+  font-family: "Poppins";
 }
 .header .header__container {
   display: flex;
@@ -349,13 +350,45 @@ template {
 .header .header__container .header__titleLogo .header__title #title {
   font-size: 3rem;
   color: #f3f3f3;
-  font-family: "Poppins";
 }
 .header .header__container .header__titleLogo .header__title .title-span {
   font-size: 2rem;
   color: #f3f3f3;
   font-family: "Rubik", sans-serif;
   cursor: text;
+}
+.header .header__container .header__search {
+  display: flex;
+  align-items: center;
+  width: 25vw;
+  padding: 5px;
+  gap: 0.2rem;
+  border-radius: 5px;
+  background-color: #0b0b0b;
+}
+.header .header__container .header__search #svgBusqueda {
+  width: 50px;
+  margin-left: 0.2rem;
+  background-color: #0b0b0b;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.header .header__container .header__search #barraBusqueda {
+  background-color: #1c1c1c;
+  color: #f3f3f3;
+  width: 100%;
+  height: 36px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.header .header__container .header__search #barraBusqueda:focus {
+  color: #f3f3f3;
+  background-color: #1c1c1c;
+  outline-color: #f3f3f3;
+  box-shadow: -3px -3px 15px #f3f3f3;
+  transition: 0.1s;
+  transition-property: box-shadow;
 }
 .header .header__container .navbar .navbar__ul {
   gap: 1rem;
@@ -377,7 +410,6 @@ template {
   list-style: none;
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: "Poppins";
   width: 100%;
   padding: 0.13rem 0 0.13rem 0;
   text-decoration: none;
@@ -414,7 +446,6 @@ template {
 }
 .header .header__container .navbar .navbar__ul #navbar__carro #numeroCarro #carroContador {
   font-size: 2.4em;
-  font-family: "Poppins";
   color: #f3f3f3;
 }
 .header .header__container .navbar .navbar__ul #navbar__carro #navbar__carro--ico {
@@ -447,6 +478,8 @@ template {
 }
 .main .section h2 {
   font-size: 2rem;
+  color: #f3f3f3;
+  margin-bottom: 2rem;
 }
 .main .section #filtroGenero {
   display: flex;
@@ -461,24 +494,24 @@ template {
   margin: 0 0 30px 30px;
   gap: 3rem;
 }
-.main .card-container #card {
+.main .card-container .card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main .card-container #card img {
+.main .card-container .card img {
   border-radius: 7px;
   width: 225px;
   height: 300px;
   margin-bottom: auto;
   border: 2px solid #f3f3f3;
 }
-.main .card-container #card h3 {
+.main .card-container .card h3 {
   border-bottom: 1px solid #f3f3f3;
   max-width: 95%;
   margin-bottom: 5px;
 }
-.main .card-container #card #card__button {
+.main .card-container .card #card__button {
   text-align: center;
   list-style: none;
   font-size: 1em;
@@ -494,12 +527,16 @@ template {
   cursor: pointer;
   transition: 0.3s;
 }
-.main .card-container #card #card__button:hover {
+.main .card-container .card #card__button:hover {
   background-color: #f3f3f3;
   color: black;
   letter-spacing: 1px;
 }
+.main .card-container .filtro {
+  display: none;
+}
 .main span {
-  cursor: pointer;
+  cursor: text;
   font-size: 2rem;
+  color: #f3f3f3;
 }/*# sourceMappingURL=style.css.map */

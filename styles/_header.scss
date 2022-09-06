@@ -4,6 +4,7 @@
   width: 100%;
   height: 10rem;
   background-color: black;
+  font-family: 'Poppins';
   .header__container {
     display: flex;
     justify-content: space-around;
@@ -23,13 +24,45 @@
         #title {
           font-size: 3rem;
           color: $color-header;
-          font-family: 'Poppins';
         }
         .title-span {
           font-size: 2rem;
           color: $color-header;
           font-family: 'Rubik', sans-serif;
           cursor: text;
+        }
+      }
+    }
+    .header__search {
+      display: flex;
+      align-items: center;
+      width: 25vw;
+      padding: 5px;
+      gap: 0.2rem;
+      border-radius: 5px;
+      background-color: #0b0b0b;
+      #svgBusqueda {
+        width: 50px;
+        margin-left: 0.2rem;
+        background-color: #0b0b0b;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      #barraBusqueda {
+        background-color: #1c1c1c;
+        color: $color-header;
+        width: 100%;
+        height: 36px;
+        padding: 10px;
+        border-radius: 5px;
+        &:focus {
+          color: $color-header;
+          background-color: #1c1c1c;
+          outline-color: $color-header;
+          box-shadow: -3px -3px 15px $color-header;
+          transition: 0.1s;
+          transition-property: box-shadow;
         }
       }
     }
@@ -52,7 +85,6 @@
             list-style: none;
             font-size: 1.5rem;
             font-weight: 600;
-            font-family: 'Poppins';
             width: 100%;
             padding: 0.13rem 0 0.13rem 0;
             text-decoration: none;
@@ -89,7 +121,6 @@
             width: 2rem;
             #carroContador {
               font-size: 2.4em;
-              font-family: 'Poppins';
               color: $color-header;
             }
           }

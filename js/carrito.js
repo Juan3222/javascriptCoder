@@ -4,7 +4,7 @@ function mostrarCarro() {
     html =
       html +
       `
-      <div id = "card">
+      <div class = "card">
         <img src="${libro.img}" alt="">
         <h3>${libro.nombre}</h3>
         <p>${libro.genero}</p>

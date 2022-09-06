@@ -1,12 +1,10 @@
-let librosTotalCopia = [...librosTotal];
-
 function mostrarProductos() {
   let html = '';
   librosTotal.forEach((libro) => {
     html =
       html +
       `
-    <div id = "card">
+    <div class = "card">
       <img src="${libro.img}" alt="">
       <h3>${libro.nombre}</h3>
       <p>${libro.autor}</p>
@@ -38,10 +36,20 @@ function agregarCarro(id) {
 
 function filtrarGenero(genero) {
   librosTotal = [...librosTotalCopia];
-  (genero == 'Fantasía' || genero == 'Ciencia Ficción') && (librosTotal = librosTotal.filter((item) => item.genero == genero));
+  switch (genero) {
+    case 'Fantasía':
+      librosTotal = librosTotal.filter((item) => item.genero == genero);
+      break;
 
+    case 'Ciencia Ficción':
+      librosTotal = librosTotal.filter((item) => item.genero == genero);
+      break;
+    default:
+      break;
+  }
   mostrarProductos();
 }
+
 obtenerCarroEnJson();
 mostrarProductos();
 numerarCarrito();

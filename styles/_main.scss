@@ -18,6 +18,8 @@
     }
     h2 {
       font-size: 2rem;
+      color: $color-header;
+      margin-bottom: 2rem;
     }
     #filtroGenero {
       display: flex;
@@ -32,11 +34,13 @@
     justify-content: center;
     margin: 0 0 30px 30px;
     gap: 3rem;
-    #card {
+
+    .card {
       display: flex;
       flex-direction: column;
       align-items: center;
       @extend %cards;
+
       img {
         border-radius: 7px;
         width: 225px;
@@ -71,9 +75,13 @@
         }
       }
     }
+    .filtro {
+      display: none;
+    }
   }
   span {
-    cursor: pointer;
+    cursor: text;
     font-size: 2rem;
+    color: $color-header;
   }
 }

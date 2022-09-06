@@ -12,3 +12,14 @@ function obtenerCarroEnJson() {
     return (carro = carro.concat(carroLs));
   }
 }
+// buscadorInput.addEventListener('input', (e) => {
+//   const resultado = e.target.value.toLowerCase();
+//   console.log(resultado);
+//   librosTotal = [...librosTotalCopia];
+//   librosTotal = librosTotal.filter((libro) => {
+//     libro.nombre.toLowerCase().includes(resultado);
+
+//     console.log(libro.nombre);
+//   });
+//   console.log(librosTotal);
+// });
