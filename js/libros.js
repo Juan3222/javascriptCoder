@@ -34,6 +34,7 @@ function agregarCarro(id) {
     },
     duration: 3500,
   }).showToast();
+  searchFilters('.buscador', '.card');
 }
 
 function filtrarGenero(genero) {

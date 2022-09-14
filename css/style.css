@@ -312,7 +312,7 @@ template {
   display: none;
 }
 
-.main .card-container .card, .main .side__main {
+.main .card-container .card-carrito, .main .card-container .card, .main .side__main {
   width: 15rem;
   height: 30rem;
   padding-top: 1rem;
@@ -465,7 +465,7 @@ template {
 .main .side__main {
   margin: 50px 50px 50px 100px;
   min-width: 550px;
-  height: 80vw;
+  height: 800px;
 }
 .main .side__main #filtroGenero {
   display: flex;
@@ -493,6 +493,7 @@ template {
 }
 .main .card-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
@@ -501,6 +502,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease-out;
 }
 .main .card-container .card img {
   border-radius: 7px;
@@ -543,8 +545,57 @@ template {
 .main .card-container .card #card__button #card__button--svg {
   max-width: 40px;
 }
+.main .card-container .card-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+.main .card-container .card-carrito img {
+  border-radius: 7px;
+  width: 225px;
+  height: 300px;
+  margin-bottom: auto;
+  border: 2px solid #f3f3f3;
+}
+.main .card-container .card-carrito h3 {
+  border-bottom: 1px solid #f3f3f3;
+  max-width: 95%;
+  margin-bottom: 5px;
+}
+.main .card-container .card-carrito #card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  font-size: 1em;
+  font-weight: 600;
+  border: 2px solid #f3f3f3;
+  width: 70%;
+  height: 3rem;
+  margin-top: auto;
+  padding: 0.13rem 0 0.13rem 0;
+  text-decoration: none;
+  background-color: #1c1c1c;
+  color: #f3f3f3;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.main .card-container .card-carrito #card__button:hover {
+  background-color: #f3f3f3;
+  border: 2px solid black;
+}
+.main .card-container .card-carrito #card__button:hover #card__button--svgColor {
+  fill: black;
+}
+.main .card-container .card-carrito #card__button #card__button--svg {
+  max-width: 40px;
+}
 .main .card-container .filtro {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
 }
 .main span {
   cursor: text;

@@ -4,11 +4,9 @@ function mostrarCarro() {
     html =
       html +
       `
-      <div class = "card">
+      <div class = "card-carrito">
         <img src="${libro.img}" alt="">
-        <h3>${libro.nombre}</h3>
-        <p>${libro.genero}</p>
-        <p>${libro.autor}</p>
+        <h3>${libro.nombre}</h3>    
         <p>$${libro.precio},00</p>
         <button id = "card__button" onclick="eliminarCarro(${i})">Eliminar del carro</button>
         <br>

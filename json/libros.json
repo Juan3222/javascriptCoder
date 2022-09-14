@@ -1,0 +1,106 @@
+[
+  {
+    "id": 0,
+    "nombre": "El Camino de los Reyes",
+    "autor": "Brandon Sanderson",
+    "genero": "Fantasía",
+    "precio": 990,
+    "img": "https://www.penguinlibros.com/uy/1765875/el-camino-de-los-reyes-el-archivo-de-las-tormentas-1.jpg"
+  },
+  {
+    "id": 1,
+    "nombre": "El Problema de los Tres Cuerpos",
+    "autor": "Cixin Liu",
+    "genero": "Ciencia Ficción",
+    "precio": 550,
+    "img": "https://www.penguinlibros.com/uy/243123/el-problema-de-los-tres-cuerpos-trilogia-de-los-tres-cuerpos-1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Dune",
+    "autor": "Frank Herbert",
+    "genero": "Ciencia Ficción",
+    "precio": 550,
+    "img": "https://1.bp.blogspot.com/-ZyR9QhRn2MY/XvxFKYjBAFI/AAAAAAAAZPs/WIcAZt8Mkn0YriEGLXWgsRBWOCXlz7ykQCNcBGAsYHQ/s1600/dune.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Harry Potter y la Piedra Filosofal",
+    "autor": "J.K Rowling",
+    "genero": "Fantasía",
+    "precio": 1000,
+    "img": "https://static.wikia.nocookie.net/esharrypotter/images/d/db/HP1_portada_espa%C3%B1ol_de_bolsillo_2020.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Fundación",
+    "autor": "Isaac Asimov",
+    "genero": "Ciencia Ficción",
+    "precio": 600,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/81HVLHE1yTL.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "El Bestiario de Axlin",
+    "autor": "Laura Gallego",
+    "genero": "Fantasía",
+    "precio": 2000,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/91XWCsyDYrL.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "El Nombre del Viento",
+    "autor": "Patrick Rothfuss",
+    "genero": "Fantasía",
+    "precio": 1990,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/7125ljaY0gL.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Los Pilares de la Tierra",
+    "autor": "Ken Follet",
+    "genero": "Novela Histórica",
+    "precio": 890,
+    "img": "https://3.bp.blogspot.com/-3BS_QXV4xOE/Vtdi-es9_XI/AAAAAAAABs0/BbR0Ivfr0YA/s1600/Los%2Bpilares%2Bde%2Bla%2Btierra.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "La Ciudad de las Bestias",
+    "autor": "Isabel Allende",
+    "genero": "Aventura",
+    "precio": 530,
+    "img": "https://librosya.com.uy/wp-content/uploads/2021/11/9789877254518-scaled.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "El Imperio Final",
+    "autor": "Brandon Sanderson",
+    "genero": "Fantasía",
+    "precio": 1190,
+    "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/a8/b9/a8b99ba35498b0cc7cfc150cdf00bbc7.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Game of Thrones",
+    "autor": "George R.R Martin",
+    "genero": "Fantasía",
+    "precio": 1300,
+    "img": "https://ratondebiblioteca15.files.wordpress.com/2019/03/juego-de-tronos.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "El Ojo del Mundo",
+    "autor": "Robert Jordan",
+    "genero": "Fantasía",
+    "precio": 890,
+    "img": "https://www.planetadelibros.com.uy/usuaris/libros/fotos/330/m_libros/329536_portada_el-ojo-del-mundo-n-0114_robert-jordan_201910151031.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "El Mercader de Libros",
+    "autor": "Luis Zueco",
+    "genero": "Novela Histórica",
+    "precio": 660,
+    "img": "https://m.media-amazon.com/images/I/51+jPK7pd8L.jpg"
+  }
+]

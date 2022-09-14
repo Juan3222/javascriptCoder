@@ -8,7 +8,7 @@
     margin: 50px 50px 50px 100px;
     @extend %cards;
     min-width: 550px;
-    height: 80vw;
+    height: 800px;
     #filtroGenero {
       display: flex;
       align-items: center;
@@ -36,6 +36,7 @@
   }
   .card-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
@@ -44,8 +45,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: all 0.3s ease-out;
       @extend %cards;
-
       img {
         border-radius: 7px;
         width: 225px;
@@ -88,8 +89,59 @@
         }
       }
     }
+    .card-carrito {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease-out;
+      @extend %cards;
+      img {
+        border-radius: 7px;
+        width: 225px;
+        height: 300px;
+        margin-bottom: auto;
+        border: 2px solid $color-header;
+      }
+      h3 {
+        border-bottom: 1px solid $color-header;
+        max-width: 95%;
+        margin-bottom: 5px;
+      }
+      #card__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+        font-size: 1em;
+        font-weight: 600;
+        border: 2px solid $color-header;
+        width: 70%;
+        height: 3rem;
+        margin-top: auto;
+        padding: 0.13rem 0 0.13rem 0;
+        text-decoration: none;
+        background-color: #1c1c1c;
+        color: $color-header;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover {
+          background-color: $color-header;
+          border: 2px solid black;
+          #card__button--svgColor {
+            fill: black;
+          }
+        }
+        #card__button--svg {
+          max-width: 40px;
+        }
+      }
+    }
+
     .filtro {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      order: 1;
     }
   }
   span {
