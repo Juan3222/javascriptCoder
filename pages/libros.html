@@ -60,12 +60,12 @@
       <section class="side__main">
         <div id="filtroGenero">
           <p>Ordenar por:</p>
-          <select id="genero" onclick="filtrarGenero(this.value)">
+          <select id="genero" onchange="filtrarGenero(this.value)">
             <option value="">Todos</option>
             <option value="Fantasía">Fantasía</option>
             <option value="Ciencia Ficción">Ciencia Ficción</option>
           </select>
-          <select id="ordenar" onclick="filtrarPrecio(this.value)">
+          <select id="ordenar" onchange="filtrarPrecio(this.value)">
             <option value="Relevancia">Relevancia</option>
             <option value="Alfabetico">Alfabéticamente</option>
             <option value="MenorM">Precio más bajo</option>

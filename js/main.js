@@ -21,7 +21,6 @@ async function traerProductos() {
 
   librosTotal = [...librosAux];
   librosTotalCopia = [...librosTotal];
-  console.log(librosTotal);
   mostrarProductos();
   return librosTotal;
 }
