@@ -436,22 +436,33 @@ template {
 .header .header__container .navbar .navbar__ul #navbar__carro {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-left: 1rem;
+  justify-content: center;
   width: 8rem;
   height: 5rem;
   list-style: none;
   background-color: black;
   border-radius: 15px;
   box-shadow: inset 0px 9px 0px #0b0b0b, inset 0px -9px 0px #2d2d2d;
-  justify-self: flex-end;
+}
+.header .header__container .navbar .navbar__ul #navbar__carro #carrito {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 350px;
+  top: 700px;
+  gap: 1rem;
+}
+.header .header__container .navbar .navbar__ul #navbar__carro #carrito .miniCarrito img {
+  width: 10rem;
 }
 .header .header__container .navbar .navbar__ul #navbar__carro #numeroCarro {
   display: flex;
   justify-content: center;
   background-color: #1b1b1b;
   border-radius: 15px;
-  width: 2rem;
+  max-width: 4rem;
+  padding: 2px;
+  margin: 10px;
 }
 .header .header__container .navbar .navbar__ul #navbar__carro #numeroCarro #carroContador {
   font-size: 2.4em;
@@ -459,10 +470,15 @@ template {
 }
 .header .header__container .navbar .navbar__ul #navbar__carro #navbar__carro--ico {
   width: 2.8rem;
+  margin: 10px;
   transition: 0.2s;
 }
 .header .header__container .navbar .navbar__ul #navbar__carro #navbar__carro--ico:hover {
   transform: scale(1.2);
+}
+
+.filterCarrito {
+  display: none;
 }
 
 .main {

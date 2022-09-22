@@ -22,21 +22,32 @@ function mostrarProductos() {
 }
 
 function agregarCarro(id) {
-  let resultado = librosTotal.find((el) => el.id === id);
-  resultado.cantidad = 1;
-  carro.push(resultado);
-  guardarCarroEnJson();
-  mostrarProductos();
-  numerarCarrito();
-  Toastify({
-    text: `${resultado.nombre} ha sido agregado al carrito con éxito`,
-    position: 'right',
-    style: {
-      background: 'linear-gradient(to right, #000000, #5f5f5f)',
-    },
-    duration: 3500,
-  }).showToast();
-  searchFilters('.buscador', '.card');
+  if (carro.find((el) => el.id === id)) {
+    Toastify({
+      text: `El libro ya ha sido agregado al carrito`,
+      position: 'right',
+      style: {
+        background: 'linear-gradient(to right, #000000, #8a0000, #5f5f5f)',
+      },
+      duration: 3500,
+    }).showToast();
+  } else {
+    let resultado = librosTotal.find((el) => el.id === id);
+    resultado.cantidad = 1;
+    carro.push(resultado);
+    guardarCarroEnJson();
+    mostrarProductos();
+    numerarCarrito();
+    Toastify({
+      text: `${resultado.nombre} ha sido agregado al carrito con éxito`,
+      position: 'center',
+      style: {
+        background: 'linear-gradient(to right, #000000, #5f5f5f)',
+      },
+      duration: 3500,
+    }).showToast();
+    searchFilters('.buscador', '.card');
+  }
 }
 
 function filtrarGenero(genero) {

@@ -103,22 +103,35 @@
         #navbar__carro {
           display: flex;
           align-items: center;
-          justify-content: space-evenly;
-          margin-left: 1rem;
+          justify-content: center;
           width: 8rem;
           height: 5rem;
           list-style: none;
           background-color: black;
           border-radius: 15px;
           box-shadow: inset 0px 9px 0px #0b0b0b, inset 0px -9px 0px #2d2d2d;
-          justify-self: flex-end;
+          #carrito {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 350px;
+            top: 700px;
+            gap: 1rem;
+            .miniCarrito {
+              img {
+                width: 10rem;
+              }
+            }
+          }
 
           #numeroCarro {
             display: flex;
             justify-content: center;
             background-color: #1b1b1b;
             border-radius: 15px;
-            width: 2rem;
+            max-width: 4rem;
+            padding: 2px;
+            margin: 10px;
             #carroContador {
               font-size: 2.4em;
               color: $color-header;
@@ -126,6 +139,7 @@
           }
           #navbar__carro--ico {
             width: 2.8rem;
+            margin: 10px;
             transition: 0.2s;
             &:hover {
               transform: scale(1.2);
@@ -135,4 +149,7 @@
       }
     }
   }
+}
+.filterCarrito {
+  display: none;
 }

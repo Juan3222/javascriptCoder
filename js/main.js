@@ -49,4 +49,19 @@ function searchFilters(input, selector) {
     }
   });
 }
+// function mostrarCarrito() {
+//   let html = '';
+//   carro.forEach((libro) => {
+//     html =
+//       html +
+//       `
+//       <div class = "miniCarrito">
+//         <img src="${libro.img}" alt="">
+//         <h3>${libro.nombre}</h3>
+//         <p>$${libro.precio},00</p>
+//       </div>
+//       `;
+//   });
+//   document.getElementById('carrito').innerHTML = html;
+// }
 searchFilters('.buscador', '.card');
