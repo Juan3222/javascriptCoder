@@ -1,17 +1,34 @@
 .main {
-  .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .section-title {
+    display: flex;
+    width: 1000px;
+    gap: 9rem;
+    color: $color-header;
+    font-size: 1.5rem;
+    h4 {
+      width: 100px;
+    }
+    .titleCantidad {
+      padding: 0 0 0 46px;
+    }
+  }
+  .sectionCart {
+    width: 1000px;
     .cardCarrito-container {
       display: flex;
       flex-direction: column;
       background-color: #000000;
+      margin-top: 2rem;
       padding: 1rem;
       gap: 2rem;
       .card-carrito {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        padding-left: 1rem;
-        gap: 1rem;
+        width: 100%;
         transition: all 0.3s ease-out;
         @extend %cards-carrito;
         img {

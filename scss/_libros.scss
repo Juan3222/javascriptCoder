@@ -5,10 +5,14 @@
   margin-bottom: 50px;
 
   .side__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 50px 50px 50px 100px;
     @extend %cards;
-    min-width: 550px;
-    height: 800px;
+    padding: 0;
+    min-width: 700px;
+    height: 100px;
     #filtroGenero {
       display: flex;
       align-items: center;
@@ -22,7 +26,6 @@
     text-align: center;
     align-items: center;
     color: $color-header;
-    margin-right: 50px;
     #genero {
       margin: 20px 0 20px 0;
       width: 150px;

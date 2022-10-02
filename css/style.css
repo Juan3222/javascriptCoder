@@ -322,7 +322,7 @@ template {
   box-shadow: 8px 8px 0px #2d2d2d, -8px -8px 0px #0b0b0b;
 }
 
-.main .section .cardCarrito-container .card-carrito {
+.main .sectionCart .cardCarrito-container .card-carrito {
   width: 50rem;
   height: 12rem;
   background: #1c1c1c;
@@ -338,6 +338,8 @@ template {
   height: 10rem;
   background-color: black;
   font-family: "Poppins";
+  position: sticky;
+  top: 0;
 }
 .header .header__container {
   display: flex;
@@ -488,9 +490,13 @@ template {
   margin-bottom: 50px;
 }
 .main .side__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 50px 50px 50px 100px;
-  min-width: 550px;
-  height: 800px;
+  padding: 0;
+  min-width: 700px;
+  height: 100px;
 }
 .main .side__main #filtroGenero {
   display: flex;
@@ -504,7 +510,6 @@ template {
   text-align: center;
   align-items: center;
   color: #f3f3f3;
-  margin-right: 50px;
 }
 .main .section #genero {
   margin: 20px 0 20px 0;
@@ -581,40 +586,61 @@ template {
   color: #f3f3f3;
 }
 
-.main .section .cardCarrito-container {
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .section-title {
+  display: flex;
+  width: 1000px;
+  gap: 9rem;
+  color: #f3f3f3;
+  font-size: 1.5rem;
+}
+.main .section-title h4 {
+  width: 100px;
+}
+.main .section-title .titleCantidad {
+  padding: 0 0 0 46px;
+}
+.main .sectionCart {
+  width: 1000px;
+}
+.main .sectionCart .cardCarrito-container {
   display: flex;
   flex-direction: column;
   background-color: #000000;
+  margin-top: 2rem;
   padding: 1rem;
   gap: 2rem;
 }
-.main .section .cardCarrito-container .card-carrito {
+.main .sectionCart .cardCarrito-container .card-carrito {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-left: 1rem;
-  gap: 1rem;
+  width: 100%;
   transition: all 0.3s ease-out;
 }
-.main .section .cardCarrito-container .card-carrito img {
+.main .sectionCart .cardCarrito-container .card-carrito img {
   border-radius: 7px;
   width: 112px;
   height: 150px;
   border: 2px solid #f3f3f3;
 }
-.main .section .cardCarrito-container .card-carrito h3 {
+.main .sectionCart .cardCarrito-container .card-carrito h3 {
   font-size: 1.2rem;
   width: 15rem;
 }
-.main .section .cardCarrito-container .card-carrito input {
+.main .sectionCart .cardCarrito-container .card-carrito input {
   text-align: center;
   max-width: 3rem;
 }
-.main .section .cardCarrito-container .card-carrito p {
+.main .sectionCart .cardCarrito-container .card-carrito p {
   max-width: 2rem;
   margin-right: 1rem;
 }
-.main .section .cardCarrito-container .card-carrito #cardCarrito__button {
+.main .sectionCart .cardCarrito-container .card-carrito #cardCarrito__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -626,13 +652,13 @@ template {
   cursor: pointer;
   transition: 0.4s;
 }
-.main .section .cardCarrito-container .card-carrito #cardCarrito__button:hover {
+.main .sectionCart .cardCarrito-container .card-carrito #cardCarrito__button:hover {
   background-color: #f3f3f3;
   border: 2px solid black;
 }
-.main .section .cardCarrito-container .card-carrito #cardCarrito__button:hover #cardCarrito__button--svgColor {
+.main .sectionCart .cardCarrito-container .card-carrito #cardCarrito__button:hover #cardCarrito__button--svgColor {
   fill: black;
 }
-.main .section .cardCarrito-container .card-carrito #cardCarrito__button #cardCarrito__button--svg {
+.main .sectionCart .cardCarrito-container .card-carrito #cardCarrito__button #cardCarrito__button--svg {
   max-width: 40px;
 }/*# sourceMappingURL=style.css.map */
